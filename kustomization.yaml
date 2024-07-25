@@ -1,0 +1,11 @@
+resources:
+  - mysql-secret.yml
+  - wordpress-secret.yml
+  - mysql-service.yml
+  - mysql-deployment.yml
+  - wordpress-service.yml
+  - wordpress-deployment.yml
+  - wordpress-hpa.yml
+  - wordpress-netpol.yml
+  - wordpress-ingress.yml
+  - lts.yml

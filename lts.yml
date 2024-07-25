@@ -1,0 +1,17 @@
+apiVersion: cert-manager.io/v1
+kind: ClusterIssuer
+metadata:
+  name: letsencrypt-prod
+spec:
+  acme:
+    # Le serveur ACME de Let's Encrypt
+    server: https://acme-v02.api.letsencrypt.org/directory
+    # Votre adresse email pour les notifications
+    email: ulrichsun@gmail.com
+    # Doit être vrai pour la production
+    privateKeySecretRef:
+      name: letsencrypt-prod
+    solvers:
+    - http01:
+        ingress:
+          class: nginx
